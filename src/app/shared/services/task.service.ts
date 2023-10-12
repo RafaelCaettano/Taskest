@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
-import { Task } from '../interfaces/task.interface';
-import { TaskPaginacao } from '../interfaces/task-paginacao.interface';
+import { Observable } from 'rxjs';
+import { Paginacao } from "@interfaces/paginacao.interface";
+import { Task } from "@interfaces/task.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class TaskService {
     private http: HttpClient
   ) { }
 
-  getTasks(paginacao = new TaskPaginacao()): Observable<Task[]> {
+  getTasks(paginacao = new Paginacao()): Observable<Task[]> {
     return this.http.get<Task[]>(`${this.tasksUrl}/tasks?_page=${paginacao.pagina}&_limit=${paginacao.limite}`);
   }
 

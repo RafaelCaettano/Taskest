@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { reducers } from './store/state.store';
+import { TasksEffects } from './store/effects/tasks.effects';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([ TasksEffects ]),
     BrowserAnimationsModule,
     HttpClientModule
   ],

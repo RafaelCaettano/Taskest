@@ -1,12 +1,12 @@
 import { Task } from "./task.interface";
 
-export interface TaskPaginacao {
+export interface Paginacao {
 	tasks: Task[];
 	limite: number;
 	pagina: number;
 }
 
-export class TaskPaginacao implements TaskPaginacao {
+export class Paginacao implements Paginacao {
 	constructor() {
 		this.pagina = 0;
 		this.limite = 0;

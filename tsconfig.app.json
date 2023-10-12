@@ -3,7 +3,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "baseUrl": "./src",
+    "types": [],
+    "paths": {
+      "@interfaces/*": ["./app/shared/interfaces/*"],
+      "@store/actions/*": ["./app/store/actions/*"]
+    }
   },
   "files": [
     "src/main.ts"
