@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from './shared/services/task.service';
 import { Store } from '@ngrx/store';
-import { AppState } from './store/state.store';
 import { TasksActions } from '@store/actions/tasks.actions';
-import { Paginacao } from '@interfaces/paginacao.interface';
 import { TasksSelectors } from './store/selectors/tasks.selectors';
+import { AppState } from '@store/state.store';
 
 @Component({
   selector: 'app-root',

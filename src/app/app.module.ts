@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { reducers } from './store/state.store';
 import { TasksEffects } from './store/effects/tasks.effects';
+import { reducers } from '@store/state.store';
 
 @NgModule({
   declarations: [

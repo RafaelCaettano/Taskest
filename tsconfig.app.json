@@ -3,11 +3,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "types": [],
     "paths": {
-      "@interfaces/*": ["./app/shared/interfaces/*"],
-      "@store/actions/*": ["./app/store/actions/*"]
+      "@interfaces/*": ["src/app/shared/interfaces/*"],
+      "@store/*": ["src/app/store/*"]
     }
   },
   "files": [
