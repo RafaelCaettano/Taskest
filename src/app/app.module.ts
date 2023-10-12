@@ -8,10 +8,12 @@ import { EffectsModule } from '@ngrx/effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksEffects } from './store/effects/tasks.effects';
 import { reducers } from '@store/state.store';
+import { TasksBoardComponent } from './pages/tasks-board/tasks-board.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TasksBoardComponent
   ],
   imports: [
     BrowserModule,
