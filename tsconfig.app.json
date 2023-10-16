@@ -6,8 +6,8 @@
     "baseUrl": "./",
     "types": [],
     "paths": {
-      "@interfaces/*": ["src/app/shared/interfaces/*"],
-      "@store/*": ["src/app/store/*"]
+      "@interfaces": ["src/app/shared/interfaces/index"],
+      "@store": ["src/app/store/index"]
     }
   },
   "files": [

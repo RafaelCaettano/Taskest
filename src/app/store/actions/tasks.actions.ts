@@ -1,5 +1,4 @@
-import { Paginacao } from "@interfaces/paginacao.interface";
-import { Task } from "@interfaces/task.interface";
+import { Task, Paginacao } from "@interfaces";
 import { createActionGroup, emptyProps, props } from "@ngrx/store";
 
 
@@ -29,5 +28,7 @@ export const TasksActions = createActionGroup({
     deleteTask: props<{ id: number }>(),
     deleteTaskSuccess: emptyProps(),
     deleteTaskError: props<{ error: any }>(),
+
+    selectTask: props<{ task: Task }>(),
   },
 });

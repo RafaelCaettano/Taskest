@@ -9,7 +9,7 @@ export interface Paginacao {
 export class Paginacao implements Paginacao {
 	constructor() {
 		this.pagina = 0;
-		this.limite = 0;
+		this.limite = 40;
 		this.tasks = [];
 	}
 }

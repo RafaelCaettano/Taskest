@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Paginacao } from "@interfaces/paginacao.interface";
-import { Task } from "@interfaces/task.interface";
+import { Task, Paginacao } from "@interfaces";
 
 @Injectable({
   providedIn: 'root'

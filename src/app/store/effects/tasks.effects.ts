@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { TaskService } from "../../shared/services/task.service";
-import { TasksActions } from "@store/actions/tasks.actions";
+import { TasksActions } from "@store";
 import { catchError, map, of, switchMap } from "rxjs";
-import { Task } from "@interfaces/task.interface";
+import { Task } from "@interfaces";
 
 @Injectable()
 export class TasksEffects {

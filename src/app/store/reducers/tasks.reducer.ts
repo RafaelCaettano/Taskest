@@ -1,7 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { TasksActions } from "@store/actions/tasks.actions";
-import { Task } from '@interfaces/task.interface';
-import { Paginacao } from '@interfaces/paginacao.interface';
+import { TasksActions } from "@store";
+import { Task, Paginacao } from '@interfaces';
 
 export class TasksState {
   tasks: Task[];
@@ -131,13 +130,19 @@ export const tasksReducer = createReducer(
   on(TasksActions.deleteTaskSuccess, (state) => ({
     ...state,
     isLoading: false,
-    loaded: true
+    loaded: true,
+    selectedTask: null
   })),
   on(TasksActions.deleteTaskError, (state, { error }) => ({
     ...state,
     isLoading: false,
     loaded: false,
     error
+  })),
+
+  on(TasksActions.selectTask, (state, { task }) => ({
+    ...state,
+    selectedTask: task
   })),
 );
 

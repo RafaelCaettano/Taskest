@@ -1,1 +1,34 @@
-<p>tasks-board works!</p>
+<div>
+  <mat-drawer-container class="tasks-board" 
+    autosize>
+    <mat-drawer #drawer 
+      opened
+      class="tasks-board__sidenav" 
+      mode="side">
+
+      <button> 
+        <img src="../../../../assets/images/taskest.svg" alt="logo">
+      </button>
+    </mat-drawer>
+  
+    <div class="tasks-board__content">
+      <div class="tasks-board__content__header">
+        <p>Auto-resizing sidenav</p>
+      </div>
+
+      <div class="tasks-board__content__body">
+        <div class="tasks-board__content__body__tasks" 
+          infinite-scroll
+          [infiniteScrollDistance]="2" 
+          [infiniteScrollThrottle]="500"
+          (scrolled)="onScroll()">
+          <app-task class="tasks-board__content__body__tasks__task"
+            *ngFor="let task of tasks"
+            (click)="editTask(task)"
+            [task]="task">
+          </app-task>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-container>
+</div>
