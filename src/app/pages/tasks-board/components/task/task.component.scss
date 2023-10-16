@@ -1,0 +1,60 @@
+.task {
+  width: 100%;
+  min-height: 210px;
+  background-color: #FAFAFA;
+  box-shadow: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: .5rem 1rem 1rem 1rem;
+
+    p {
+      width: 100%;
+      color: #969696;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      display: -webkit-box;
+      -webkit-line-clamp: 5; 
+      -webkit-box-orient: vertical; 
+    }
+  }
+    
+  &__status {
+    padding: 0 1rem 1rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #969696;
+
+    &--pendente, &--concluida {
+      padding: .25rem .75rem;
+      border-radius: 1rem;
+      color: black;
+      font-weight: 500;
+      font-size: .75rem;
+    }
+
+    &--pendente {
+      background-color: #FADDC3;
+    }
+
+    &--concluida {
+      background-color: #C5E9C1;
+    }
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}

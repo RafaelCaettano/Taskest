@@ -1,0 +1,27 @@
+<div>
+  <div class="task-details">
+    <form [formGroup]="taskForm">
+      <mat-form-field appearance="outline">
+        <mat-label> Título </mat-label>
+
+        <input [formControl]="titulo"
+          matInput 
+          type="text"
+          placeholder="Título"/>
+          
+        <mat-error *ngIf="titulo.invalid"> {{ titulo.errors?.['errorMessage'] }} </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label> Descrição </mat-label>
+
+        <input [formControl]="titulo"
+          matInput 
+          type="text"
+          placeholder="Descrição"/>
+          
+        <mat-error *ngIf="descricao.invalid"> {{ descricao.errors?.['errorMessage'] }} </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<button (click)="click.emit()">
+  <mat-card class="task">
+    <mat-card-header class="task__header">
+      <mat-card-title> {{ task?.titulo }} </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="task__content">
+      <p> {{ task?.descricao }} </p>
+    </mat-card-content>
+
+    <div class="task__status">
+      <span [class]="'task__status--' + task?.status"> {{ task?.status }} </span>
+    </div>
+  </mat-card>
+</button>
