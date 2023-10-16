@@ -1,6 +1,3 @@
-
-# Projeto Angular com JSON-Server
-
 Este é um projeto Angular que utiliza o JSON-Server como um servidor de back-end simulado para criar uma aplicação web de exemplo. O JSON-Server é uma ferramenta que permite criar uma API REST simulada com um arquivo JSON como banco de dados. Essa combinação é ótima para desenvolvedores que desejam prototipar rapidamente aplicativos web e testar funcionalidades sem a necessidade de um servidor back-end real.
 
 ## Pré-requisitos
